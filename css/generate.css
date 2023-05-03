@@ -1,0 +1,218 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+	height: 100%;   /*0%, 16%, 50%, 83, 100%*/
+	background: linear-gradient(90deg, lightgreen 0%,magenta 26%,cyan , magenta 73%,lightgreen 100% );
+	background-size: 300% 300%;
+	animation: toggle 5s infinite;
+
+}
+
+@keyframes toggle{
+	from
+	{
+		background-position: 0% 50%;
+	}
+
+	to
+	{
+		background-position: 150%;
+	}
+}
+
+
+p
+{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+
+.form-sections
+{  
+  position: relative;
+  background-color: #222831;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 50%;
+  height: 90%;
+  border-radius: 25px;
+  
+}
+
+.top-section
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  
+  background-color: #222831;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.top-section p
+{
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+.top-section span i
+{
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  top: 70px;
+  height: 2px;
+  background-color: lightgreen;
+}
+.top-section div
+{
+  margin-right: 20px;
+}
+.top-section div img
+{
+  width: 60px;
+
+}
+
+.grid
+{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 25px;
+  column-gap: 25px;
+  margin-top: 10vh;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 60px;
+
+}
+
+.input-box input
+{
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  outline: none;
+  box-shadow: none;
+  transition: 0.5s;
+  z-index: 10;
+  
+}
+
+
+.grid .input-box
+{ 
+  
+  position: relative;
+  width: 100%;
+}
+
+.input-box span
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  transition:  0.5s;
+  pointer-events: none;
+  padding: 5px 0px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+.input-box input:focus ~ span,
+.input-box input:valid ~ span
+{
+
+  transform: translateY(-25px);
+  font-size:  12px;
+}
+
+i
+{
+  position: absolute;
+  background-color: lightgreen;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 2px;
+  transition: 0.5s;
+  
+}
+
+input:focus ~ i,
+input:valid ~ i
+{
+  height: 40px;
+}
+
+.input-box p
+{
+  position: absolute;
+  width: 100%;
+  margin-top: -18px;
+  left: 440px;
+  color: rgb(69, 69, 69);
+  cursor: default;
+
+}
+
+.bottom-section
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.bottom-section button
+{
+	background-color: #222831;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.bottom-section button:hover
+{
+  opacity: 0.90;
+}
+
+.bottom-section button:active
+{
+  opacity: 0.80;
+}
+
+
+
+
